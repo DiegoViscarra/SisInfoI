@@ -1,0 +1,13 @@
+<h1>
+<%= @article.title %>
+</h1>
+<div>
+<%= @article.fecha %>
+</div>
+<div>
+<%= @article.body %>
+</div>
+<div>
+<%= link_to "Editar", edit_article_path(@article),class:"blue", data: { confirm: '¿Seguro que desea editar el registro?' } %>
+<%= link_to "Eliminar", @article, class:"blue", method: :delete, data: { confirm: '¿Seguro que desea eliminar el registro?' } %>
+</div>

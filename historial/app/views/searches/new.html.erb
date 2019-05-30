@@ -1,0 +1,22 @@
+<h1>Búsqueda de Consultas</h1>
+
+<%= form_for @search do |f| %>
+    <div class="field">
+        <%= f.label :keywords %><br />
+        <%= f.text_field :keywords %>
+    </div>
+    <div class="field">
+        <%= f.label :min_fecha, "Rango de Fechas" %><br />
+        <%= f.text_field :min_fecha %>
+        <%= f.text_field :max_fecha %>
+    </div>
+    <div class="field">
+        <%= f.label :Tipo_de_Consulta %><br />
+        <%= f.text_field :tipo %>
+    </div>
+   <div class="field">
+        <%= f.label :Cie_10 %><br />
+        <%= f.text_field :enfermedad %>
+    </div>
+    <div class="actions"><%= f.submit "Buscar" %></div>
+<% end %>

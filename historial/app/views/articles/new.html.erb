@@ -9,12 +9,41 @@
         <%= f.text_field :title, placeholder: "Titulo", class:"form-control" %>
     </div>
     <div class="field">
+        Imagen: <%= f.file_field :cover %>
+    </div>
+    <div class="field">
+        Documento: <%= f.file_field :documents %>
+    </div>
+    <div class="field">
         <%= f.text_field :fecha, placeholder: "Fecha (AAAA-MM-DD)", class:"form-control" %>
     </div>
     <div class="field">
-        <%= f.text_area :body, placeholder: "Escribe aquí la consulta", style:"height:250px", class:"form-control" %>
+        <%= f.text_area :body, placeholder: "Escribe aquí la consulta", style:"height:150px", class:"form-control" %>
     </div>
-
+    <div class="field">
+        <%= f.text_field :tipo_consulta, placeholder: "Tipo de consulta", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_field :cie, placeholder: "CIE-10", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_area :sintomas, placeholder: "Síntomas", style:"height:100px", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_area :medicacion, placeholder: "Medicación Prescrita", style:"height:50px", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_area :examenes, placeholder: "Exámenes Solicitados", style:"height:100px", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_area :diagnostico, placeholder: "Diagnóstico", style:"height:100px", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_field :hospital, placeholder: "Hospital", class:"form-control" %>
+    </div>
+    <div class="field">
+        <%= f.text_field :doctor, placeholder: "Doctor", class:"form-control" %>
+    </div>
     <div class="field">
         <%= f.submit "Guardar", class:"btn be-blue", data: { confirm: '¿Desea guardar el regstro?' } %>
     </div>

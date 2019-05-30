@@ -6,6 +6,9 @@ a,a:visited{
     color: inherit !important;
     text-decoration: none;
 }
+.text-left{
+    text-align: left
+}
 .be-blue{
     background-color: #4558FF;
 }
@@ -14,6 +17,12 @@ a,a:visited{
 }
 .blue{
     background-color: #4558FF;
+}
+.red{
+    background-color: #FF5748;
+}
+.yellow{
+    background-color: #FEFF07;
 }
 .large-padding{
     padding: 10px 7px;

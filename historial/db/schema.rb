@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_13_044931) do
+ActiveRecord::Schema.define(version: 2019_05_26_023122) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,46 @@ ActiveRecord::Schema.define(version: 2019_05_13_044931) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "fecha"
+    t.string "cie"
+    t.string "tipo_consulta"
+    t.text "sintomas"
+    t.text "medicacion"
+    t.text "examenes"
+    t.text "diagnostico"
+    t.string "hospital"
+    t.string "doctor"
+    t.string "cover_file_name"
+    t.string "cover_content_type"
+    t.bigint "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.string "documents_file_name"
+    t.string "documents_content_type"
+    t.bigint "documents_file_size"
+    t.datetime "documents_updated_at"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "keywords"
+    t.date "min_fecha"
+    t.date "max_fecha"
+    t.string "tipo"
+    t.string "enfermedad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "permission_level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
